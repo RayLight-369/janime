@@ -1,0 +1,154 @@
+img.bg-img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+div.bg {
+  width: 100vw;
+  height: 86vh;
+  background: #0e060ede;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+div.bg::before {
+  content: " ";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #573057;
+  top: 90vh;
+  left: -60px;
+  z-index: 2;
+  filter: blur(120px);
+}
+
+div.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+div.hero p {
+  font-family: AnimeAce;
+  color: white;
+  font-size: 40px;
+  line-height: 150%;
+  text-align: center;
+  width: 70%;
+}
+
+div.hero .inputs {
+  width: 55%;
+  backdrop-filter: blur(5px);
+}
+
+div.anime-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px 35px 58px 35px;
+  overflow-x: hidden;
+  color: #fdfdfd;
+  background: #110611;
+  box-shadow: 0 -120px 90px #110611;
+  position: relative;
+}
+
+div.anime-section::after {
+  content: " ";
+  position: fixed;
+  width: 130px;
+  height: 170px;
+  background: #573057;
+  top: 250px;
+  right: -60px;
+  filter: blur(120px);
+}
+
+div.top-picks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 70vw;
+}
+
+div.anime-container {
+  justify-content: flex-start !important;
+  width: 100% !important;
+  gap: 50px 30px !important;
+  z-index: 2;
+}
+
+p.heading {
+  font-family: AnimeAce;
+}
+
+button.load-more-btn {
+  width: 100px;
+  height: 30px;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  border: none;
+  background: rgb(96 70 111);
+  color: #fdfefd;
+  top: 20px;
+  border-radius: 6px;
+  transition: 120ms transform;
+}
+
+button.load-more-btn:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+@keyframes translate {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  div.bg {
+    height: 70vh;
+  }
+
+  div.hero p {
+    font-family: AnimeAce;
+    color: white;
+    font-size: 26px;
+    line-height: 130%;
+    text-align: center;
+    width: 80%;
+  }
+
+  div.anime-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    /* justify-content: center; */
+  }
+
+  div.top-picks {
+    width: calc(100vw - 40px);
+    /* justify-content: center; */
+  }
+
+  div.anime-container {
+    gap: 30px 20px !important;
+    justify-content: space-evenly !important;
+  }
+}

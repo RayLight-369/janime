@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url("./Assets/Imgs/cursor.svg"), auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+  color: #fdfdfd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: Quicksand;
+  src: url("../src/Assets/Fonts/Quicksand.ttf");
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: Quicksand;
+  src: url("../src/Assets/Fonts/QuicksandMedium.ttf");
+  font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: Quicksand;
+  src: url("../src/Assets/Fonts/QuicksandSemiBold.ttf");
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: ABeeZee;
+  src: url("../src/Assets/Fonts/ABeeZee.ttf");
+}
+
+@font-face {
+  font-family: Alata;
+  src: url("../src/Assets/Fonts/Alata.ttf");
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../src/Assets/Fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../src/Assets/Fonts/Poppins-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: AnimeAce;
+  src: url("../src/Assets/Fonts/Anime-Ace.ttf");
+  font-weight: 300;
+}
+
+:root {
+  --accent-color: #C891FF;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #110611;
+  /* scroll-behavior: smooth; */
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background: #180e11;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #180e11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3c243c;
+  border-radius: 5px;
+  min-height: 30px;
 }

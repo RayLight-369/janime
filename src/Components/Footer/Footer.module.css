@@ -1,0 +1,157 @@
+footer.footer {
+  position: relative;
+  /* top: 100px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  backdrop-filter: blur(10px);
+}
+
+footer.footer a {
+  text-decoration: none;
+  color: #A4A4A4;
+  font-family: abeezee;
+}
+
+footer.footer div.body div.title a.email {
+  text-decoration: underline;
+  font-family: Quicksand;
+}
+
+footer.footer div.body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #201624d3;
+  width: 100%;
+  height: 200px;
+}
+
+footer.footer div.body div.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+footer.footer div.body div.title img {
+  width: 120px;
+  height: auto !important;
+}
+
+footer.footer div.body div.update {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 28px;
+}
+
+footer.footer div.body div.update p.title {
+  color: white;
+  font-family: abeezee;
+  font-size: 14px;
+}
+
+footer.footer div.body div.update div.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+footer.footer div.body div.update div.inputs input.email-input {
+  padding: 9px 5px;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #8F8F8F;
+  color: white;
+}
+
+footer.footer div.body div.update div.inputs input.email-input:active,
+footer.footer div.body div.update div.inputs input.email-input:focus {
+  border-bottom: 2px solid #d6d6d6;
+}
+
+input.email-input::placeholder {
+  color: #8F8F8F;
+}
+
+footer.pf {
+  position: relative !important;
+  top: 100% !important;
+}
+
+footer.footer div.body div.update div.inputs input.request {
+  width: 100px;
+  padding: 13px 15px;
+  font-family: abeezee;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 13px;
+  background: linear-gradient(98deg, rgb(71, 44, 79) -33.62%, #572b72 49.51%, rgb(121, 62, 137) 141.31%);
+  transition: 180ms;
+}
+
+footer.footer div.body div.update div.inputs input.request:hover {
+  transform: scale(.95);
+}
+
+footer.footer p.copyright {
+  background: #160e19;
+  color: #A4A4A4;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  footer.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  div.body * {
+    font-size: 12px !important;
+    text-align: center !important;
+  }
+
+  footer.footer div.body div.title img {
+    width: 50px;
+  }
+
+  footer.footer div.body div.update {
+    align-items: center;
+    gap: 15px;
+  }
+
+  footer.footer div.body div.update div.inputs {
+    align-items: center;
+  }
+
+  footer.footer p.copyright {
+    font-size: 12px;
+  }
+
+  footer.footer div.body div.update div.inputs input.request {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+}

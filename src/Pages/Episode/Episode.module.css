@@ -1,0 +1,57 @@
+div.episode-controls {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+iframe.episode-frame {
+  width: 100%;
+  height: max(calc((70vw - 100px) / 1.777), 400px);
+  overflow: hidden;
+  position: relative;
+  transition: 150ms all;
+  background: none !important;
+}
+
+div.episode-controls div.buttons {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  position: relative;
+  top: 5px;
+}
+
+div.buttons a {
+  background: none;
+  border: none;
+  outline: none;
+  color: #eee;
+  position: relative;
+  font-family: Quicksand;
+  font-size: 13px;
+}
+
+div.buttons a::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5px;
+  height: 1px;
+  background: #bbb;
+}
+
+div.episode-controls div.buttons a.prev {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+}
+
+div.episode-controls div.buttons a.next {
+  position: absolute;
+  right: 0;
+  padding: 10px;
+}

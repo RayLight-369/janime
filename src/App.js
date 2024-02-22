@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from './Components/Navbar/Navbar';
+import AnimePage from './Pages/AnimePage/AnimePage';
+import { AnimatePresence } from 'framer-motion';
+import AnimeInfoPage from './Pages/AnimeInfoPage/AnimeInfoPage';
+import Episode from './Pages/Episode/Episode';
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <AnimatePresence mode='wait'>
+        <Routes>
+          <Route path='/' element={ <Navbar /> }>
+            <Route index path='/' element={ <AnimePage /> } />
+            <Route path='/:animeID' element={ <AnimeInfoPage /> }>
+              <Route path='/:animeID/:epID' element={ <Episode /> } />
+            </Route>
+          </Route>
+        </Routes>
+      </AnimatePresence>
+    </BrowserRouter>
   );
 }
+
 
 export default App;

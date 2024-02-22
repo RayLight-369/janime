@@ -1,0 +1,88 @@
+div.recent-episodes {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 15px 20px;
+  height: auto;
+  border-radius: 15px;
+  overflow: auto;
+  background: rgba(35, 22, 35, 0.5);
+}
+
+p.recent-episodes-heading {
+  font-family: AnimeAce;
+  color: #fdfdfd;
+}
+
+div.episode-container {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  background: #ffffff08;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 9px 10px;
+  transition: 150ms;
+  position: relative;
+  z-index: 2;
+  /* transform: translateY(10px) scale(.9);
+  opacity: 0;
+  animation: translate linear forwards;
+  animation-timeline: view();
+  animation-range: entry -50px; */
+}
+
+div.episode-container:hover {
+  transform: scale(1.05);
+  background: #ffffff10;
+}
+
+div.episode-container::after {
+  content: "⮞";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: none;
+  color: white;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 150ms;
+}
+
+div.episode-container:hover::after {
+  right: 10px;
+}
+
+div.episode-container img {
+  width: 57.85px;
+  height: 68.9px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+div.episode-container div.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+div.episode-container div.content p.title {
+  font-family: Quicksand;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+div.episode-container div.content p.number {
+  font-family: Quicksand;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  div.recent-episodes {
+    width: calc(100vw - 40px);
+  }
+}
